@@ -837,7 +837,7 @@ button {
     align-items: center;
   }
   #proCounter div{
-    width: 30%;
+    width: 5%;
     height: 10px;
     background-color: var(--maincolor--);
     border-radius: 4px;
