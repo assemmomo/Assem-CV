@@ -276,13 +276,13 @@ function showProject(projectNumber) {
 
 // التحقق من الضغط على السهم الأيمن
 document.getElementById('goRight').addEventListener('click', function() {
-    currentProject = (currentProject % 3) + 1; // التبديل بين 1 و 2 و 3 بشكل دوري
+    currentProject = (currentProject % 5) + 1; // التبديل بين 1 و 2 و 3 بشكل دوري
     showProject(currentProject);
 });
 
 // التحقق من الضغط على السهم الأيسر
 document.getElementById('goLeft').addEventListener('click', function() {
-    currentProject = (currentProject - 2 + 3) % 3 + 1; // التبديل بين 3 و 2 و 1 بشكل دوري
+    currentProject = (currentProject - 2 + 5) % 5 + 1; // التبديل بين 3 و 2 و 1 بشكل دوري
     showProject(currentProject);
 });
 
@@ -290,18 +290,36 @@ document.getElementById('goLeft').addEventListener('click', function() {
 showProject(currentProject);
 
 setInterval(function(){
-    if(pro1.style.display=="block"){
+   if(pro1.style.display=="block"){
         count1.classList.add("activePro");
         count2.classList.remove("activePro");
         count3.classList.remove("activePro");
+        count4.classList.remove("activePro");
+        count5.classList.remove("activePro");
     }else if(pro2.style.display=="block"){
         count1.classList.remove("activePro");
         count2.classList.add("activePro");
         count3.classList.remove("activePro");
+        count4.classList.remove("activePro");
+        count5.classList.remove("activePro");
     }else if(pro3.style.display=="block"){
         count1.classList.remove("activePro");
         count2.classList.remove("activePro");
+        count4.classList.remove("activePro");
+        count5.classList.remove("activePro");
         count3.classList.add("activePro");
+    }else if(pro4.style.display=="block"){
+        count1.classList.remove("activePro");
+        count2.classList.remove("activePro");
+        count3.classList.remove("activePro");
+        count4.classList.add("activePro");
+        count5.classList.remove("activePro");
+    }else if(pro5.style.display=="block"){
+        count1.classList.remove("activePro");
+        count2.classList.remove("activePro");
+        count3.classList.remove("activePro");
+        count4.classList.remove("activePro");
+        count5.classList.add("activePro");
     }
 },100)
 
