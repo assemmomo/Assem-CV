@@ -330,7 +330,7 @@ setInterval(function(){
         count5.classList.add("activePro");
         count6.classList.remove("activePro");
     }
-    else if(pro5.style.display=="block"){
+    else if(pro6.style.display=="block"){
         count1.classList.remove("activePro");
         count2.classList.remove("activePro");
         count3.classList.remove("activePro");
